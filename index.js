@@ -31,13 +31,6 @@ app.use('/api/notes',require('./routes/notes'));
 app.use('/api/register',require('./routes/register'));
 app.use('/api/v1/work',require('./routes/WorkerAuth'));
 
-  app.use(express.urlencoded({extended:false}));
-  app.use(
-    cors({
-        origin:["http://localhost:5000","https://daily-ment.onrender.com"],
-    })
-  )
-
 app.listen(port,function(){
     
     console.log("Server is running on port ",{port});
